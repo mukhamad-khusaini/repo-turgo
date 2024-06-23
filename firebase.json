@@ -2,6 +2,12 @@
   "hosting": {
     "public": "dist",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
     "headers": [
       {
         "source": "/index.html",
@@ -13,7 +19,7 @@
         ]
       },
       {
-        "source": "assets/*.js",
+        "source": "/assets/*.js",
         "headers": [
           {
             "key": "Content-Type",
