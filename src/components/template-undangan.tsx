@@ -1,3 +1,3 @@
-export default function template_undangan() {
+export default function Template_undangan() {
   return <></>;
 }
