@@ -1,0 +1,81 @@
+.template-publikasi {
+  width: 100%;
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  justify-content: center;
+
+  animation: intro 0.5s ease-out;
+}
+
+.template-single {
+  width: 85%;
+  background: var(--white, #feffdb);
+  border-radius: 1rem;
+  border: 1px solid var(--grey, #444);
+  overflow: hidden;
+  padding: 1.3rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.template-single img {
+  width: 100%;
+  border-radius: 0.9375rem;
+  align-self: center;
+}
+
+.template-publikasi h4 {
+  color: var(--orange, #ff8b00);
+  font-family: "Monomaniac One";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.template-publikasi p {
+  color: var(--grey, #444);
+  font-family: Montserrat;
+  font-size: 0.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.download {
+  width: 12.8125rem;
+  height: 1.5rem;
+  border-radius: 0.9375rem;
+  background: var(--orange, #ff8b00);
+  margin-top: 1rem;
+  border: none;
+
+  align-self: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.download h4 {
+  color: var(--white, #feffdb);
+  font-family: Kokoro;
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@keyframes intro {
+  0% {
+    transform: translateY(10rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
