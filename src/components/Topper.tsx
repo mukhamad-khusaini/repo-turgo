@@ -1,6 +1,6 @@
 import style from "../assets/css/topper.module.css";
 
-export default function Topper() {
+export default function Topper({ setter }: { setter: (a: boolean) => void }) {
   return (
     <div className={style.topper}>
       <svg
@@ -16,7 +16,7 @@ export default function Topper() {
       <div className={style["background-template"]}></div>
       <img className={style["logo"]} src="/logo.png" alt="logo" />
       <div className={style["click-box"]}>
-        <div className={style["clicker1"]}>
+        <div onClick={() => setter(true)} className={style["clicker1"]}>
           <img src="/images/template-pic.png" alt="tmp" />
           <p>Template</p>
         </div>
@@ -30,7 +30,7 @@ export default function Topper() {
         >
           <path d="M1 0V34.5" stroke="black" />
         </svg>
-        <div className={style["clicker2"]}>
+        <div onClick={() => setter(false)} className={style["clicker2"]}>
           <img src="/images/publikasi-pic.png" alt="pub" />
           <p>Publikasi</p>
         </div>

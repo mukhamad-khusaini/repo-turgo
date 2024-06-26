@@ -5,7 +5,7 @@
 }
 
 .vector-background {
-  background-image: url("../public/gambarPattern.png");
+  background-image: url("/gambarPattern.png");
   background-size: cover;
   background-position: center;
   fill: var(--orange, #ff8b00);

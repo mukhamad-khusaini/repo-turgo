@@ -2,9 +2,13 @@
   width: 100%;
   margin-bottom: 1.5rem;
 
+  cursor: pointer;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  animation: intro 0.5s ease-out;
 }
 
 .template-single {
@@ -54,4 +58,14 @@
 
 .template-single hr {
   width: 100%;
+}
+
+@keyframes intro {
+  0% {
+    transform: translateY(10rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }

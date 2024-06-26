@@ -1,14 +1,32 @@
 import style from "../assets/css/template-undangan.module.css";
+import { ITemplate } from "../model/ITemplate";
 
-export default function Template_undangan() {
+export default function Template_undangan({
+  judul,
+  deskripsi,
+  gambar = "",
+  file,
+}: ITemplate) {
   return (
-    <div className={style["template-undangan"]}>
+    <div
+      onClick={() => (location.href = file)}
+      className={style["template-undangan"]}
+    >
       <div className={style["template-single"]}>
-        <img src="/images/undangan.png" alt="undangan" />
+        <img
+          src={
+            gambar != ""
+              ? "https://drive.google.com/thumbnail?id=" +
+                gambar.split("=")[1] +
+                "&sz=w1000"
+              : "/images/default.jpg"
+          }
+          alt="undangan"
+        />
         <div>
-          <h4>Template undangan layatan</h4>
+          <h4>{judul}</h4>
           <hr />
-          <p>Download template undangan layatan</p>
+          <p>{deskripsi}</p>
         </div>
       </div>
     </div>

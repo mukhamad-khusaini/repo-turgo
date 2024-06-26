@@ -1,15 +1,24 @@
+import { useState } from "react";
 import "./App.css";
 import Topper from "./components/Topper";
-import Template_undangan from "./components/Template-undangan";
-import Template_publikasi from "./components/Template-publikasi";
+import Box_template_undangan from "./components/Box-template-undangan";
+import Box_publikasi from "./components/Box-publikasi";
+import Bottom from "./components/Bottom";
 
 function App() {
+  const [und, setUnd]: any = useState([]);
+  const [box, setBox]: any = useState(true);
+
   return (
     <main>
-      <Topper />
+      <Topper setter={setBox} />
       <div className="vertical-indenting"></div>
-      <Template_undangan />
-      <Template_publikasi />
+      {box ? (
+        <Box_template_undangan getter={und} setter={setUnd} />
+      ) : (
+        <Box_publikasi getter={und} setter={setUnd} />
+      )}
+      <Bottom />
     </main>
   );
 }

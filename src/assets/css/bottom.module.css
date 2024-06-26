@@ -1,0 +1,26 @@
+.bottom {
+  width: 100%;
+  height: 1.75rem;
+  flex-shrink: 0;
+  background: var(--grey, #444);
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom h4 {
+  width: 11.0625rem;
+  height: 0.85406rem;
+  flex-shrink: 0;
+  color: var(--white, #feffdb);
+  font-family: Montserrat;
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

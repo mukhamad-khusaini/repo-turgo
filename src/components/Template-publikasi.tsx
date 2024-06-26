@@ -1,13 +1,32 @@
 import style from "../assets/css/template-publikasi.module.css";
+import { ITemplate } from "../model/ITemplate";
 
-export default function Template_publikasi() {
+export default function Template_publikasi({
+  judul,
+  deskripsi,
+  gambar = "",
+  file,
+}: ITemplate) {
   return (
     <div className={style["template-publikasi"]}>
       <div className={style["template-single"]}>
-        <img src="/images/kopSurat.png" alt="kop surat" />
-        <h4>Kop Surat Pemuda</h4>
-        <p>Gunakan sebagai kop surat atas nama pemuda</p>
-        <button type="button" className={style.download}>
+        <img
+          src={
+            gambar
+              ? "https://drive.google.com/thumbnail?id=" +
+                gambar.split("=")[1] +
+                "&sz=w1000"
+              : "/images/default.jpg"
+          }
+          alt="kop surat"
+        />
+        <h4>{judul}</h4>
+        <p>{deskripsi}</p>
+        <button
+          type="button"
+          onClick={() => (location.href = file)}
+          className={style.download}
+        >
           <h4>Download</h4>
         </button>
       </div>
