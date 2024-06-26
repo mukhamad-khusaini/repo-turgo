@@ -19,7 +19,7 @@ export default function Template_undangan({
               ? "https://drive.google.com/thumbnail?id=" +
                 gambar.split("=")[1] +
                 "&sz=w1000"
-              : "/images/default.jpg"
+              : "https://mukhamad-khusaini.github.io/repoturgo/images/default.jpg"
           }
           alt="undangan"
         />

@@ -4,6 +4,14 @@
 
 main {
   overflow: hidden;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  width: 390px;
 }
 
 .vertical-indenting {

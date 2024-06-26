@@ -1,12 +1,11 @@
 .bottom {
-  width: 100%;
+  width: 390px;
   height: 1.75rem;
   flex-shrink: 0;
   background: var(--grey, #444);
 
   position: fixed;
   bottom: 0;
-  left: 0;
 
   display: flex;
   align-items: center;

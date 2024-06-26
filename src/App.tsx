@@ -11,14 +11,16 @@ function App() {
 
   return (
     <main>
-      <Topper setter={setBox} />
-      <div className="vertical-indenting"></div>
-      {box ? (
-        <Box_template_undangan getter={und} setter={setUnd} />
-      ) : (
-        <Box_publikasi getter={und} setter={setUnd} />
-      )}
-      <Bottom />
+      <div className="center">
+        <Topper setter={setBox} />
+        <div className="vertical-indenting"></div>
+        {box ? (
+          <Box_template_undangan getter={und} setter={setUnd} />
+        ) : (
+          <Box_publikasi getter={und} setter={setUnd} />
+        )}
+        <Bottom />
+      </div>
     </main>
   );
 }
