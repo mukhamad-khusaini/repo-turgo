@@ -7,8 +7,13 @@ import Box_publikasi from "./components/Box-publikasi";
 import Bottom from "./components/Bottom";
 
 function App() {
+  // Data Template Undangan
   const [und, setUnd]: any = useState([]);
+  // Data Publikasi
+  const [pub, setPub]: any = useState([]);
+  // State (template undangan/publikasi)
   const [box, setBox]: any = useState(true);
+  // Loader State
   const [load, setLoad]: any = useState(true);
 
   return (
@@ -39,7 +44,7 @@ function App() {
             onload={setLoad}
           />
         ) : (
-          <Box_publikasi getter={und} setter={setUnd} onload={setLoad} />
+          <Box_publikasi getter={pub} setter={setPub} onload={setLoad} />
         )}
 
         {/* footer */}
