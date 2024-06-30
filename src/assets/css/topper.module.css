@@ -1,5 +1,5 @@
 .topper {
-  position: fixed;
+  position: relative;
   background-color: white;
   padding-bottom: 1rem;
 }

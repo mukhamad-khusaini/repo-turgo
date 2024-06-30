@@ -1,14 +1,15 @@
 import style from "../assets/css/template-publikasi.module.css";
-import { ITemplate } from "../model/ITemplate";
+import { ITemplate, ILoader } from "../model/ITemplate";
 
 export default function Template_publikasi({
   judul,
   deskripsi,
   gambar = "",
   file,
-}: ITemplate) {
+  onload,
+}: ITemplate & ILoader) {
   return (
-    <div className={style["template-publikasi"]}>
+    <div onLoad={() => onload(false)} className={style["template-publikasi"]}>
       <div className={style["template-single"]}>
         <img
           src={

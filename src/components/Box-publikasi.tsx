@@ -6,12 +6,15 @@ import { ITemplate } from "../model/ITemplate";
 export default function Box_publikasi({
   getter,
   setter,
+  onload,
 }: {
   getter: [];
   setter: (d: ITemplate[]) => void;
+  onload: (e: boolean) => void;
 }) {
   useEffect(() => {
     CallData("1qrVYEfXv4-vOOy1Wzse_wKPEgtt4a4rrr24FIRC05MY", setter);
+    onload(true);
   }, []);
 
   return (
@@ -24,6 +27,7 @@ export default function Box_publikasi({
             deskripsi={u.deskripsi}
             gambar={u.gambar}
             file={u.file}
+            onload={onload}
           />
         );
       })}

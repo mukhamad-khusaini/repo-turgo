@@ -4,3 +4,7 @@ export interface ITemplate {
   gambar?: string;
   file: string;
 }
+
+export interface ILoader {
+  onload: (e: boolean) => void;
+}

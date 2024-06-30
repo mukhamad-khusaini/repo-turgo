@@ -1,15 +1,17 @@
 import style from "../assets/css/template-undangan.module.css";
-import { ITemplate } from "../model/ITemplate";
+import { ILoader, ITemplate } from "../model/ITemplate";
 
 export default function Template_undangan({
   judul,
   deskripsi,
   gambar = "",
   file,
-}: ITemplate) {
+  onload,
+}: ITemplate & ILoader) {
   return (
     <div
       onClick={() => (location.href = file)}
+      onLoad={() => onload(false)}
       className={style["template-undangan"]}
     >
       <div className={style["template-single"]}>

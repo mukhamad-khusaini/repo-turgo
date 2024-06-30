@@ -6,9 +6,11 @@ import { ITemplate } from "../model/ITemplate";
 export default function Box_template_undangan({
   getter,
   setter,
+  onload,
 }: {
   getter: [];
   setter: (d: ITemplate[]) => void;
+  onload: (e: boolean) => void;
 }) {
   useEffect(() => {
     CallData("1-I349arfKOwTCPkGNb25LGnbsJEYbKze1TUVITo2Kss", setter);
@@ -24,6 +26,7 @@ export default function Box_template_undangan({
             deskripsi={u.deskripsi}
             gambar={u.gambar}
             file={u.file}
+            onload={onload}
           />
         );
       })}
